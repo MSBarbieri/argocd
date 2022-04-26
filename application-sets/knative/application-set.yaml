@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: knative-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: '{{cluster}}-knative'
+    spec:
+      source:
+        repoURL: https://github.com/MSBarbieri/argocd-application-sets.git
+        targetRevision: HEAD
+        path: deploys/knative

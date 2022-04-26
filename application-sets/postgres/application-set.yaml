@@ -14,11 +14,11 @@ spec:
         chart: postgresql
         helm:
           parameters:
-          - name: auth.database
+          - name: global.postgresql.auth.database
             value: '{{cluster}}'
-          - name: auth.username
+          - name: global.postgresql.auth.username
             value: admin
-          - name: auth.password
+          - name: global.postgresql.auth.password
             value: admin
-          - name: auth.password
+          - name: auth.postgresPassword
             value: admin

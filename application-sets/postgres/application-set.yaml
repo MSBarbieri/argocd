@@ -16,5 +16,7 @@ spec:
           parameters:
           - name: auth.database
             value: '{{cluster}}'
-          - name: auth.postgresPassword
-            value: postgres
+          - name: auth.username
+            value: admin
+          - name: auth.password
+            value: admin

@@ -10,7 +10,7 @@ spec:
       elements:
       - cluster: local
         url: https://kubernetes.default.svc
-        namespace: cockroachdb
+        namespace: default
       # other clusters
       # - cluster: engineering-prod
       #   url: https://2.4.6.8

@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  annotations:
+  name: metabase
+  namespace: metabase
+spec:
+  gateways:
+    - default/default-gateway
+  hosts:
+    - "metabase.localhost"
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: metabase
+            port:
+              number: 80

@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: cockroachdb-application-set
+  name: postgres-application-set
   namespace: argocd
 spec:
   generators:
@@ -10,7 +10,7 @@ spec:
       elements:
       - cluster: local
         url: https://kubernetes.default.svc
-        namespace: cockroachdb
+        namespace: postgres
       # other clusters
       # - cluster: engineering-prod
       #   url: https://2.4.6.8
@@ -21,7 +21,7 @@ spec:
       labels:
         general: application-sets
         all: "true"
-        applicationName: cockroachdb
+        applicationName: postgres
     spec:
       project: default
       destination:

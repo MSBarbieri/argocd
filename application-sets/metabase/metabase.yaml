@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: sealed-secrets-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: '{{cluster}}-sealed-secrets'
+    spec:
+      source:
+        repoURL: https://github.com/MSBarbieri/argocd-application-sets.git
+        targetRevision: HEAD
+        path: deploys/metabase

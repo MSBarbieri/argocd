@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: postgres-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: '{{cluster}}-postgres'
+    spec:
+      source:
+        repoURL: https://charts.bitnami.com/bitnami
+        targetRevision: 11.1.24
+        chart: postgres

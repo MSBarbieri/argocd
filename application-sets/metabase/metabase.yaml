@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: sealed-secrets-application-set
+  name: metabase-application-set
   namespace: argocd
 spec:
   template:
     metadata:
-      name: '{{cluster}}-sealed-secrets'
+      name: '{{cluster}}-metabase'
     spec:
       source:
         repoURL: https://github.com/MSBarbieri/argocd-application-sets.git

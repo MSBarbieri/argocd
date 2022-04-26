@@ -3,6 +3,8 @@ kind: ApplicationSet
 metadata:
   name: metabase-application-set
   namespace: argocd
+data:
+  kustomize.buildOptions: --enable_alpha_plugins --enable-helm
 spec:
   template:
     metadata:

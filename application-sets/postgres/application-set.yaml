@@ -12,3 +12,9 @@ spec:
         repoURL: https://charts.bitnami.com/bitnami
         targetRevision: 11.1.24
         chart: postgresql
+        helm:
+          parameters:
+          - name: auth.database
+            value: {{cluster}}
+          - name: auth.postgresPassword
+            value: postgres

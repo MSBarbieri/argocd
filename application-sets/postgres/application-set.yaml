@@ -15,6 +15,6 @@ spec:
         helm:
           parameters:
           - name: auth.database
-            value: {{cluster}}
+            value: '{{cluster}}'
           - name: auth.postgresPassword
             value: postgres

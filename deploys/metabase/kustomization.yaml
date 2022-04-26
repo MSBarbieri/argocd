@@ -2,11 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - "gateway.yaml"
-
+namespace: metabase
 helmCharts:
 - name: metabase
-  includeCRDs: true
-  namespace: metabase
   version: 2.1.0
   releaseName: metabase
   repo: https://pmint93.github.io/helm-charts

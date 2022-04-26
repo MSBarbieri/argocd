@@ -3,8 +3,3 @@ kind: Kustomization
 resources:
   - "gateway.yaml"
 namespace: metabase
-helmCharts:
-- name: metabase
-  version: 2.1.0
-  releaseName: metabase
-  repo: https://pmint93.github.io/helm-charts

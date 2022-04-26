@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: metabase-gateway-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: '{{cluster}}-metabase-gateway'
+    spec:
+      source:
+        repoURL: https://pmint93.github.io/helm-charts
+        targetRevision: 2.1.0
+        chart: metabase

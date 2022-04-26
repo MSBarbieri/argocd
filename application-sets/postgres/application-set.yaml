@@ -20,3 +20,5 @@ spec:
             value: admin
           - name: auth.password
             value: admin
+          - name: auth.password
+            value: admin

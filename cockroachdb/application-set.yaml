@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cockroachdb-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: '{{cluster}}-cockroachdb'
+    spec:
+      source:
+        repoURL: https://charts.cockroachdb.com/
+        targetRevision: 21.2.9
+        chart: cockroachdb

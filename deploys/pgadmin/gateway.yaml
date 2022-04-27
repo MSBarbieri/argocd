@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  annotations:
+  name: pgadmin
+  namespace: postgres
+spec:
+  gateways:
+    - default/default-gateway
+  hosts:
+    - "pgadmin.localhost"
+  http:
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: pgadmin
+            port:
+              number: 80

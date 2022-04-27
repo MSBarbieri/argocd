@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: pgamdin-application-set
+  name: pgadmin-application-set
   namespace: argocd
 spec:
   generators:

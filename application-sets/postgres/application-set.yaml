@@ -14,7 +14,7 @@ spec:
         chart: postgresql
         helm:
           values:
-            - ./values.yaml
+            - values.yaml
           parameters:
           - name: global.postgresql.auth.database
             value: '{{cluster}}'

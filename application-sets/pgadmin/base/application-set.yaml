@@ -19,8 +19,8 @@ spec:
   template:
     metadata:
       labels:
-        general: application-sets
-        all: "true"
+        general: external-service
+        all: "false"
         applicationName: pgadmin
     spec:
       project: default

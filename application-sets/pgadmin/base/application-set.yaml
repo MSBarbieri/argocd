@@ -21,7 +21,7 @@ spec:
       labels:
         general: application-sets
         all: "true"
-        applicationName: postgres
+        applicationName: pgadmin
     spec:
       project: default
       destination:

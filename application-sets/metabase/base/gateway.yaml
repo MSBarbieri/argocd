@@ -21,6 +21,7 @@ spec:
       labels:
         general: application-sets
         all: "true"
+        type: gateway
         applicationName: metabase
     spec:
       project: default

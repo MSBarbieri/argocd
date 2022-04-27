@@ -15,6 +15,6 @@ spec:
         helm:
           parameters:
             - name: pgadmin.username
-              value: 'admin'
+              value: 'admin@admin.com'
             - name: persistence.enabled
               value: 'false'

@@ -13,8 +13,12 @@ spec:
         targetRevision: 11.1.24
         chart: postgresql
         helm:
-          values:
-            - values.yaml
           parameters:
           - name: global.postgresql.auth.database
             value: '{{cluster}}'
+          - name: global.postgresql.auth.username
+            value: admin
+          - name: global.postgresql.auth.password
+            value: admin
+          - name: auth.postgresPassword
+            value: admin

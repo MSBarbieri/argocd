@@ -4,4 +4,3 @@ bases:
   - base
 patchesStrategicMerge:
   - "application-set.yaml"
-  - "values.yaml"

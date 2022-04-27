@@ -13,7 +13,7 @@ spec:
         targetRevision: 11.1.24
         chart: postgresql
         helm:
-          valueFiles:
+          values:
             - ./values.yaml
           parameters:
           - name: global.postgresql.auth.database

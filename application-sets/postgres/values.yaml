@@ -25,7 +25,7 @@ global:
       postgresPassword: "admin"
       username: "admin"
       password: "admin"
-      database: "{{cluster}}"
+      database: ""
       existingSecret: ""
     ## @param global.postgresql.service.ports.postgresql PostgreSQL service port (overrides `service.ports.postgresql`)
     ##

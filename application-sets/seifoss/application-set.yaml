@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: seifloss-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: 'seifloss'
+    spec:
+      source:
+        repoURL: https://github.com/MSBarbieri/argocd-application-sets.git
+        targetRevision: rss
+        path: deploys/seifloss

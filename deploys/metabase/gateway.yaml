@@ -13,6 +13,8 @@ spec:
     - match:
         - uri:
             prefix: /
+      rewrite:
+        uri: /
       route:
         - destination:
             host: local-metabase.metabase.svc.cluster.local

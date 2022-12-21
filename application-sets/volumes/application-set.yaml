@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: selfoss-application-set
+  name: volumes-application-set
   namespace: argocd
 spec:
   template:
     metadata:
-      name: 'selfoss'
+      name: 'volumes'
     spec:
       source:
         repoURL: https://github.com/MSBarbieri/argocd-application-sets.git
         targetRevision: rss
-        path: deploys/selfoss
+        path: deploys/volumes

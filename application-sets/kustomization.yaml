@@ -6,3 +6,5 @@ resources:
   - postgres
   - metabase
   - knative
+  - redis
+  - mongo

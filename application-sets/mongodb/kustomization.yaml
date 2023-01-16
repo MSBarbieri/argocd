@@ -4,4 +4,4 @@ bases:
   - base
 patchesStrategicMerge:
   - "application-set.yaml"
-  - "gateway.yaml"
+  # - "gateway.yaml"

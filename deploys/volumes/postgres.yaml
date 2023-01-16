@@ -13,7 +13,7 @@ spec:
     name: data-local-postgres-postgresql-0
     namespace: postgres
   hostPath:
-    path: /var/local-path-provisioner/pvc-ae500904-61c8-4676-9364-87af81e59e57_postgres_data-local-postgres-postgresql-0
+    path: /var/local-path-provisioner/pvc-49115b1e-e226-456a-a2a3-d6750203ad96_postgres_data-local-postgres-postgresql-0
     type: DirectoryOrCreate
   nodeAffinity:
     required:

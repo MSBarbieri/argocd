@@ -2,8 +2,8 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   annotations:
-  name: metabase
-  namespace: metabase
+  name: mongodb
+  namespace: mongodb
 spec:
   gateways:
     - default/default-gateway

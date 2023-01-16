@@ -4,4 +4,4 @@ bases:
   - base
 patchesStrategicMerge:
   - "application-set.yaml"
-  - "mongodb.yaml"
+  - "gateway.yaml"

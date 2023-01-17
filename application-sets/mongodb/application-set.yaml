@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: mongodb-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: '{{cluster}}-mongodb'
+    spec:
+      source:
+        repoURL: https://charts.bitnami.com/bitnami
+        targetRevision: 13.6.3
+        chart: mongodb

@@ -2,13 +2,13 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   annotations:
-  name: metabase
-  namespace: metabase
+  name: mongodb
+  namespace: mongodb
 spec:
   gateways:
     - default/default-gateway
   hosts:
-    - "metabase.localhost"
+    - "mongodb.localhost"
   http:
     - match:
         - uri:
@@ -17,6 +17,6 @@ spec:
         uri: /
       route:
         - destination:
-            host: local-metabase.metabase.svc.cluster.local
+            host: local-metabase.monngodw.svc.cluster.local
             port:
               number: 80

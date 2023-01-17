@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: selfoss 
+  labels:
+    app: selfoss 
+spec:
+  selector:
+    matchLabels:
+      app: selfoss 
+  template:
+    metadata:
+      labels:
+        app: selfoss 
+    spec:
+      containers:
+      - name: selfoss
+        image: rsprta/selfoss
+        ports:
+          - containerPort: 8888
+        env:
+          - name: LOG_TO_STDOUT 
+            value: "true"
+        volumeMounts:
+          - mountPath: "/selfoss/config.ini"
+            subPath: "config.ini"
+            readOnly: true
+            name: config-file
+      volumes:
+        - name: config-file
+          configMap:
+            name: config-file
+            items:
+              - key: "config.ini"
+                path: "config.ini"

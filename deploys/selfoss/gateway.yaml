@@ -2,21 +2,19 @@ apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   annotations:
-  name: metabase
-  namespace: metabase
+  name: rss
+  namespace: rss
 spec:
   gateways:
     - default/default-gateway
   hosts:
-    - "metabase.localhost"
+    - "rss.localhost"
   http:
     - match:
         - uri:
             prefix: /
-      rewrite:
-        uri: /
       route:
         - destination:
-            host: local-metabase.metabase.svc.cluster.local
+            host: selfoss.rss.svc.cluster.local
             port:
               number: 80

@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: volumes-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: 'volumes'
+    spec:
+      source:
+        repoURL: https://github.com/MSBarbieri/argocd-application-sets.git
+        targetRevision: rss
+        path: deploys/volumes

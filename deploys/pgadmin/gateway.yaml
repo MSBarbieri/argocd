@@ -15,6 +15,6 @@ spec:
             prefix: /
       route:
         - destination:
-            host: pgadmin
+            host: local-pgadmin
             port:
               number: 31359

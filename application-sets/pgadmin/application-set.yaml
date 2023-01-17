@@ -12,3 +12,7 @@ spec:
         repoURL: https://cetic.github.io/helm-charts
         targetRevision: 0.1.12
         chart: pgadmin
+        helm:
+          parameters:
+            - name: service.port
+              value: 31359

@@ -15,4 +15,4 @@ spec:
         helm:
           parameters:
             - name: service.port
-              value: 31359
+              value: "31359"

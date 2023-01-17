@@ -17,6 +17,6 @@ spec:
         uri: /
       route:
         - destination:
-            host: local-metabase.monngodw.svc.cluster.local
+            host: local-mongodb.mongodb.svc.cluster.local
             port:
               number: 80

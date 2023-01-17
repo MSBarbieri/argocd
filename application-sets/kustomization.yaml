@@ -8,3 +8,4 @@ resources:
   - knative
   - mongodb
   - redis
+  - pgadmin

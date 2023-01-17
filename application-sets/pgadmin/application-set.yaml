@@ -18,3 +18,5 @@ spec:
               value: "ClusterIP"
             - name: service.port
               value: "31359"
+            - name: pgadmin.username	
+              value: "admin"

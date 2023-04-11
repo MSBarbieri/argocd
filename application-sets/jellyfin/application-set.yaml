@@ -10,4 +10,5 @@ spec:
     spec:
       source:
         repoURL: https://utkuozdemir.org/helm-charts
+        targetRevision: 2.0.0
         chart: jellyfin

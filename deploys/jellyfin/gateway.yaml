@@ -7,4 +7,4 @@ metadata:
 spec:
   hostname: "jellyfin.*"
   prefix: /
-  service: http://jellyfin.media-server.svc.cluster.local:80
+  service: http://jellyfin.media-server.svc.cluster.local:8096

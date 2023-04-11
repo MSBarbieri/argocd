@@ -11,3 +11,4 @@ resources:
   - kafka
   - pgadmin
   - emqx
+  - jellyfin

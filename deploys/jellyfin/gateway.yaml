@@ -1,0 +1,10 @@
+---
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+  name: jellyfin-route-mapping
+  namespace: media-server
+spec:
+  hostname: "jellyfin.*"
+  prefix: /
+  service: http://jellyfin.media-server.svc.cluster.local:80

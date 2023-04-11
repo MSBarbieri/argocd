@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: jellyfin-application-set
+  namespace: argocd
+spec:
+  template:
+    metadata:
+      name: '{{cluster}}-jellyfin'
+    spec:
+      source:
+        repoURL: https://utkuozdemir.org/helm-charts
+        chart: jellyfin

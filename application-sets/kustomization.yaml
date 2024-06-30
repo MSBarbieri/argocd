@@ -12,3 +12,4 @@ resources:
   - pgadmin
   - emqx
   - jellyfin
+  - homepage

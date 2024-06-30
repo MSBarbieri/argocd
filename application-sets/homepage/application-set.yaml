@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: emqx-application-set
+  name: homepage-application-set
   namespace: argocd
 spec:
   template:
     metadata:
-      name: '{{cluster}}-emqx'
+      name: '{{cluster}}-homepage'
     spec:
       source:
         repoURL: https://jameswynn.github.io/helm-charts

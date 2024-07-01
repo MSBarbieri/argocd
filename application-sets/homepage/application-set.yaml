@@ -89,10 +89,10 @@ spec:
                         description: Dev Colmeia
                         siteMonitor: https://dev-api.colmeia.cx/v1/health-check
                     - Gitlab:
-                        href: http://gitlab.colmeia.me/
+                        href: https://gitlab.colmeia.me/
                         icon: https://static-00.iconduck.com/assets.00/gitlab-icon-2048x1885-1o0cwkbx.png
                         description: gitlab da colmeia
-                        siteMonitor: http://gitlab.colmeia.me/
+                        siteMonitor: https://gitlab.colmeia.me/
                     - Grafana:
                         href: https://grafana.colmeia.cx/
                         icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png

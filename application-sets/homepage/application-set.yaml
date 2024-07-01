@@ -14,6 +14,8 @@ spec:
         chart: homepage
         helm:
           valuesObject:
+            image:
+              repository: ghcr.io/gethomepage/homepage
             config:
               background:
                 image: https://raw.githubusercontent.com/MSBarbieri/wallpapers/main/wallpapers/Pictures/wallpapers/spike_bebop.jpg?raw=true

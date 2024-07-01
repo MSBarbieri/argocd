@@ -18,7 +18,9 @@ spec:
               repository: ghcr.io/gethomepage/homepage
               tag: latest
             config:
-              background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+              settings:
+                title: Matheus Barbieri HomePage
+                background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
               bookmarks:
                 - Developer:
                     - Github:

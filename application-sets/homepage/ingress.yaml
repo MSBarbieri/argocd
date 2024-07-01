@@ -8,6 +8,6 @@ ingress:
     kubernetes.io/tls-acme: "true"
   labels: {}
   tls:
-    - secretName: mydomain-tls
+    - secretName: istio-cert
       hosts:
       -  kube.msbarbieri.dev

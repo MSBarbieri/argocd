@@ -30,7 +30,7 @@ spec:
                 headerStyle: clean
                 target: _self
                 quicklaunch:
-                  searchDescriptions: true
+                  searchDescriptions: false
                   hideInernetSearch: true
                   showSearchSuggestions: true
                   provider: google

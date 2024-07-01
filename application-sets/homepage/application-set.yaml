@@ -18,12 +18,7 @@ spec:
               repository: ghcr.io/gethomepage/homepage
               tag: latest
             config:
-              background:
-                image: https://raw.githubusercontent.com/MSBarbieri/wallpapers/main/wallpapers/Pictures/wallpapers/spike_bebop.jpg?raw=true
-                blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
-                saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
-                brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
-                opacity: 50 # 0-100
+              background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
               bookmarks:
                 - Developer:
                     - Github:

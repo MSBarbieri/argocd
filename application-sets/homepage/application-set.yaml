@@ -20,6 +20,7 @@ spec:
             config:
               settings:
                 title: Matheus Barbieri HomePage
+                color: slate
                 background:
                   image: https://github.com/MSBarbieri/wallpapers/blob/ee3f94dd71e228412ab83991c609fa9afeb23cba/mylivewallpapers-com-Miyamoto-Vagabond-4K-ezgif.com-video-to-webp-converter.webp?raw=true
                   blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
@@ -39,7 +40,9 @@ spec:
                     style: row
                     columns: 4
                   Colmeia Admin:
+                    style: column
                   Colmeia Management:
+                    style: column
                   Personal:
                     style: row
                     columns: 4
@@ -64,13 +67,6 @@ spec:
                         - abbr: gcp
                           href: https://console.cloud.google.com/
               services:
-                - Personal:
-                    - ArgoCD:
-                        href: https://argocd.kube.msbarbieri.dev/
-                        description: ArgoCD
-                        icon: https://miro.medium.com/v2/resize:fit:1400/1*d_nWfpG-EF831-yXwx64HQ.png
-                        app: argocd-server
-                        namespace: argocd
                 - Colmeia:
                     - Prod:
                         href: https://app.colmeia.cx
@@ -116,6 +112,13 @@ spec:
                     - Microsoft Admin:
                         href: https://admin.microsoft.com/
                         description: admin microsoft
+                - Personal:
+                    - ArgoCD:
+                        href: https://argocd.kube.msbarbieri.dev/
+                        description: ArgoCD
+                        icon: https://miro.medium.com/v2/resize:fit:1400/1*d_nWfpG-EF831-yXwx64HQ.png
+                        app: argocd-server
+                        namespace: argocd
               widgets:
                 # show the kubernetes widget, with the cluster summary and individual nodes
                 - kubernetes:

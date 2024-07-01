@@ -97,20 +97,24 @@ spec:
                         href: https://grafana.colmeia.cx/
                         icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png
                         description: Colmeia Grafana
-                        siteMonitor: http://grafana.colmeia.cx/
+                        siteMonitor: https://grafana.colmeia.cx/
                 - Colmeia Management:
                     - GCP:
                         href: https://console.cloud.google.com/
+                        icon: https://images.store.crowdstrike.com/9748z14dd5zg/7MGTtSyAi2Z29Dmiwkusu/30de0bcae755e11aebe7e87823feb9cb/Googlecloud_icon_square.png
                         description: console de gcp
                     - Equinix:
                         href: https://auth.equinix.com/
+                        icon: https://cdn.icon-icons.com/icons2/2699/PNG/512/equinix_logo_icon_169199.png
                         description: Equinix
                 - Colmeia Admin:
                     - Google Admin:
                         href: https://admin.google.com/
+                        icon: https://seeklogo.com/images/G/google-admin-logo-A220604CE8-seeklogo.com.png
                         description: admin google
                     - Microsoft Admin:
                         href: https://admin.microsoft.com/
+                        icon: https://www.svgrepo.com/show/504601/microsoft365-admin.svg
                         description: admin microsoft
                 - Personal:
                     - ArgoCD:

@@ -1,0 +1,13 @@
+ingress:
+  enabled: true
+  path: /
+  hosts:
+    -  kube.msbarbieri.dev
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  labels: {}
+  tls:
+    - secretName: mydomain-tls
+      hosts:
+      -  kube.msbarbieri.dev

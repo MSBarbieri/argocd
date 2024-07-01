@@ -4,11 +4,12 @@ metadata:
   name: homepage-application-set
   namespace: argocd
 spec:
+  syncPolicy:
+    applicationsSync: create-update
   template:
     metadata:
       name: '{{cluster}}-homepage'
     syncPolicy:
-    applicationsSync: create-update
     spec:
       source:
         repoURL: https://jameswynn.github.io/helm-charts

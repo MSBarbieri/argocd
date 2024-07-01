@@ -109,7 +109,7 @@ spec:
                         description: console de gcp
                     - Equinix:
                         href: https://auth.equinix.com/
-                        description Equinix
+                        description: Equinix
                 - Colmeia Admin:
                     - Google Admin:
                         href: https://admin.google.com/

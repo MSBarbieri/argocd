@@ -23,7 +23,6 @@ spec:
       syncPolicy:
         syncOptions:
             - Replace=true
-        applicationsSync: create-update
         automated:
           prune: true
           allowEmpty: true

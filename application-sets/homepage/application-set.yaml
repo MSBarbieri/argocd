@@ -33,7 +33,7 @@ spec:
                   searchDescriptions: false
                   hideInernetSearch: true
                   showSearchSuggestions: true
-                  provider: google
+                  provider: duckduckgo
                 statusStyle: "dot"
                 layout:
                   Colmeia:

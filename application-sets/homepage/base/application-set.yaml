@@ -21,6 +21,9 @@ spec:
         server: '{{url}}'
         namespace: '{{namespace}}'
       syncPolicy:
+        syncOptions:
+            - Replace=true
+        applicationsSync: create-update
         automated:
           prune: true
           allowEmpty: true

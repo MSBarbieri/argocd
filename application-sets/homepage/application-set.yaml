@@ -38,6 +38,12 @@ spec:
                   Colmeia:
                     style: row
                     columns: 4
+                  Colmeia Admin:
+                    style: row
+                    columns: 2
+                  Colmeia Management:
+                    style: row
+                    columns: 2
                   HomeLab:
                     style: row
                     columns: 2
@@ -45,9 +51,6 @@ spec:
                   Media:
                     style: row
                     columns: 4
-                  Colmeia Admin:
-                    style: row
-                    columns: 2
 
 
               bookmarks:
@@ -100,16 +103,20 @@ spec:
                         icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png
                         description: Colmeia Grafana
                         siteMonitor: http://grafana.colmeia.cx/
+                - Colmeia Management:
                     - GCP:
                         href: https://console.cloud.google.com/
                         description: console de gcp
-                    - Colmeia Admin:
-                        - Google Admin:
-                            href: https://admin.google.com/
-                            description: admin google
-                        - Microsoft Admin:
-                            href: https://admin.microsoft.com/
-                            description: admin microsoft
+                    - Equinix:
+                        href: https://auth.equinix.com/
+                        description Equinix
+                - Colmeia Admin:
+                    - Google Admin:
+                        href: https://admin.google.com/
+                        description: admin google
+                    - Microsoft Admin:
+                        href: https://admin.microsoft.com/
+                        description: admin microsoft
               widgets:
                 # show the kubernetes widget, with the cluster summary and individual nodes
                 - kubernetes:
@@ -140,12 +147,6 @@ spec:
               main:
                 enabled: true
                 annotations:
-                  # Example annotations to add Homepage to your Homepage!
-                  gethomepage.dev/enabled: "true"
-                  gethomepage.dev/name: "Homepage"
-                  gethomepage.dev/description: "Dynamically Detected Homepage"
-                  gethomepage.dev/group: "Dynamic"
-                  gethomepage.dev/icon: "homepage.png"
                   traefik.ingress.kubernetes.io/router.entrypoints: websecure
                   traefik.ingress.kubernetes.io/router.tls: 'true'
                   ingress.kubernetes.io/force-ssl-redirect: "true"

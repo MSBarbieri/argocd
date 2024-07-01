@@ -66,6 +66,16 @@ spec:
                     - Google Cloud:
                         - abbr: gcp
                           href: https://console.cloud.google.com/
+                - User:
+                    - monkeytype:
+                        - abbr: mt
+                          href: https://monkeytype.com/
+                    - youtube:
+                        - abbr: gl
+                          href: http://youtube.com
+                    - Twitch.tv:
+                        - abbr: gcp
+                          href: https://twitch
               services:
                 - Colmeia:
                     - Prod:

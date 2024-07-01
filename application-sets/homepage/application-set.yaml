@@ -9,7 +9,6 @@ spec:
   template:
     metadata:
       name: '{{cluster}}-homepage'
-    syncPolicy:
     spec:
       source:
         repoURL: https://jameswynn.github.io/helm-charts

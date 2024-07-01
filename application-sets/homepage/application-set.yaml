@@ -138,7 +138,7 @@ spec:
                       memory: true
                       showLabel: true
                 - search:
-                    provider: google
+                    provider: duckduckgo
                     target: _self
               kubernetes:
                 mode: cluster

@@ -13,19 +13,6 @@ spec:
         targetRevision: 1.2.3
         chart: homepage
         valueObject:
-          ingress:
-            enabled: true
-            path: /
-            hosts:
-              -  kube.msbarbieri.dev
-            annotations:
-              traefik.ingress.kubernetes.io/router.entrypoints: websecure
-              traefik.ingress.kubernetes.io/router.tls: 'true'
-              ingress.kubernetes.io/force-ssl-redirect: "true"
-            tls:
-              - secretName: istio-cert
-                hosts:
-                -  kube.msbarbieri.dev
         values:
           ######################################################
           config:
@@ -68,28 +55,32 @@ spec:
                   target: _blank
             kubernetes:
               mode: cluster
-          settings:
+          # The service account is necessary to allow discovery of other services
+          serviceAccount:
+            create: true
+            name: homepage
 
-        # The service account is necessary to allow discovery of other services
-        serviceAccount:
-          create: true
-          name: homepage
-
-        # This enables the service account to access the necessary resources
-        enableRbac: true
-
-        ingress:
-          main:
-            enabled: true
-            annotations:
-              # Example annotations to add Homepage to your Homepage!
-              gethomepage.dev/enabled: "true"
-              gethomepage.dev/name: "Homepage"
-              gethomepage.dev/description: "Dynamically Detected Homepage"
-              gethomepage.dev/group: "Dynamic"
-              gethomepage.dev/icon: "homepage.png"
-            hosts:
-              - host: homepage.example.com
-                paths:
-                  - path: /
-                    pathType: Prefix
+          # This enables the service account to access the necessary resources
+          enableRbac: true
+          ingress:
+            main:
+              enabled: true
+              annotations:
+                # Example annotations to add Homepage to your Homepage!
+                gethomepage.dev/enabled: "true"
+                gethomepage.dev/name: "Homepage"
+                gethomepage.dev/description: "Dynamically Detected Homepage"
+                gethomepage.dev/group: "Dynamic"
+                gethomepage.dev/icon: "homepage.png"
+                traefik.ingress.kubernetes.io/router.entrypoints: websecure
+                traefik.ingress.kubernetes.io/router.tls: 'true'
+                ingress.kubernetes.io/force-ssl-redirect: "true"
+              tls:
+                - secretName: istio-cert
+                  hosts:
+                  -  kube.msbarbieri.dev
+              hosts:
+                - host: kube.msbarbieri.dev
+                  paths:
+                    - path: /
+                      pathType: Prefix

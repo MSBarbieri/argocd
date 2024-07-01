@@ -16,6 +16,7 @@ spec:
           valuesObject:
             image:
               repository: ghcr.io/gethomepage/homepage
+              tag: 0.9.2
             config:
               background:
                 image: https://raw.githubusercontent.com/MSBarbieri/wallpapers/main/wallpapers/Pictures/wallpapers/spike_bebop.jpg?raw=true

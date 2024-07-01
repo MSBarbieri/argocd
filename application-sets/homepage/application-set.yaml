@@ -14,7 +14,6 @@ spec:
         chart: homepage
         helm:
           valuesObject:
-            ######################################################
             config:
               background:
                 image: https://raw.githubusercontent.com/MSBarbieri/wallpapers/main/wallpapers/Pictures/wallpapers/spike_bebop.jpg?raw=true
@@ -25,16 +24,29 @@ spec:
               bookmarks:
                 - Developer:
                     - Github:
-                        - abbr: GH
+                        - abbr: gh
                           href: https://github.com/
                     - Gitlab:
-                        - abbr: GL
+                        - abbr: gl
                           href: http://gitlab.colmeia.me/
+                    - Google Cloud:
+                        - abbr: gcp
+                          href: https://console.cloud.google.com/
               services:
-                - ArgoCD:
-                    - My Third Service:
+                - Personal:
+                    - ArgoCD:
                         href: https://argocd.kube.msbarbieri.dev/
-                        description: Homepage is 😎
+                        description: ArgoCD
+                        icon: https://miro.medium.com/v2/resize:fit:1400/1*d_nWfpG-EF831-yXwx64HQ.png
+                        app: argocd-server
+                        namespace: argocd
+                - Colmeia:
+                    - gitlab:
+                        href: http://gitlab.colmeia.me/
+                        description: gitlab da colmeia
+                    - google:
+                        href: https://console.cloud.google.com/
+                        description: console de gcp
               widgets:
                 # show the kubernetes widget, with the cluster summary and individual nodes
                 - kubernetes:

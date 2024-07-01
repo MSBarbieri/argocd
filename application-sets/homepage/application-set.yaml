@@ -17,7 +17,7 @@ spec:
             ######################################################
             config:
               background:
-                image: https://github.com/MSBarbieri/wallpapers/blob/ee3f94dd71e228412ab83991c609fa9afeb23cba/mylivewallpapers-com-Miyamoto-Vagabond-4K-ezgif.com-video-to-webp-converter.webp?raw=true
+                image: https://raw.githubusercontent.com/MSBarbieri/wallpapers/main/wallpapers/Pictures/wallpapers/spike_bebop.jpg?raw=true
                 blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
                 saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
                 brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness

@@ -20,7 +20,36 @@ spec:
             config:
               settings:
                 title: Matheus Barbieri HomePage
-                background: https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+                background:
+                  image: https://github.com/MSBarbieri/wallpapers/blob/ee3f94dd71e228412ab83991c609fa9afeb23cba/mylivewallpapers-com-Miyamoto-Vagabond-4K-ezgif.com-video-to-webp-converter.webp?raw=true
+                  blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+                  saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+                  brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+                  opacity: 50 # 0-100
+                headerStyle: clean
+                target: _self
+                quicklaunch:
+                  searchDescriptions: true
+                  hideInernetSearch: true
+                  showSearchSuggestions: true
+                  provider: google
+                statusStyle: "dot"
+                layout:
+                  Colmeia:
+                    style: row
+                    columns: 4
+                  HomeLab:
+                    style: row
+                    columns: 2
+                    header: false
+                  Media:
+                    style: row
+                    columns: 4
+                  Colmeia Admin:
+                    style: row
+                    columns: 2
+
+
               bookmarks:
                 - Developer:
                     - Github:
@@ -41,12 +70,46 @@ spec:
                         app: argocd-server
                         namespace: argocd
                 - Colmeia:
-                    - gitlab:
+                    - Prod:
+                        href: https://app.colmeia.cx
+                        icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+                        description: Prod Colmeia
+                        siteMonitor: https://api.colmeia.cx/v1/health-check
+                    - Beta:
+                        href: https://beta-app.colmeia.cx
+                        icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+                        description: Prod Colmeia
+                        siteMonitor: https://beta-api.colmeia.cx/v1/health-check
+                    - QA:
+                        href: https://qa-app.colmeia.cx
+                        icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+                        description: QA Colmeia
+                        siteMonitor: https://qa-api.colmeia.cx/v1/health-check
+                    - Dev:
+                        href: https://dev-app.colmeia.cx
+                        icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+                        description: Dev Colmeia
+                        siteMonitor: https://dev-api.colmeia.cx/v1/health-check
+                    - Gitlab:
                         href: http://gitlab.colmeia.me/
+                        icon: https://static-00.iconduck.com/assets.00/gitlab-icon-2048x1885-1o0cwkbx.png
                         description: gitlab da colmeia
-                    - google:
+                        siteMonitor: http://gitlab.colmeia.me/
+                    - Grafana:
+                        href: https://grafana.colmeia.cx/
+                        icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png
+                        description: Colmeia Grafana
+                        siteMonitor: http://grafana.colmeia.cx/
+                    - GCP:
                         href: https://console.cloud.google.com/
                         description: console de gcp
+                    - Colmeia Admin:
+                        - Google Admin:
+                            href: https://admin.google.com/
+                            description: admin google
+                        - Microsoft Admin:
+                            href: https://admin.microsoft.com/
+                            description: admin microsoft
               widgets:
                 # show the kubernetes widget, with the cluster summary and individual nodes
                 - kubernetes:
@@ -63,7 +126,7 @@ spec:
                       showLabel: true
                 - search:
                     provider: google
-                    target: _blank
+                    target: _self
               kubernetes:
                 mode: cluster
             # The service account is necessary to allow discovery of other services

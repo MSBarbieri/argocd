@@ -16,25 +16,24 @@ spec:
           valuesObject:
             ######################################################
             config:
+              background:
+                image: https://github.com/MSBarbieri/wallpapers/blob/ee3f94dd71e228412ab83991c609fa9afeb23cba/mylivewallpapers-com-Miyamoto-Vagabond-4K-ezgif.com-video-to-webp-converter.webp?raw=true
+                blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+                saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+                brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+                opacity: 50 # 0-100
               bookmarks:
                 - Developer:
                     - Github:
                         - abbr: GH
                           href: https://github.com/
+                    - Gitlab:
+                        - abbr: GL
+                          href: http://gitlab.colmeia.me/
               services:
-                - My First Group:
-                    - My First Service:
-                        href: http://localhost/
-                        description: Homepage is awesome
-
-                - My Second Group:
-                    - My Second Service:
-                        href: http://localhost/
-                        description: Homepage is the best
-
-                - My Third Group:
+                - ArgoCD:
                     - My Third Service:
-                        href: http://localhost/
+                        href: https://argocd.kube.msbarbieri.dev/
                         description: Homepage is 😎
               widgets:
                 # show the kubernetes widget, with the cluster summary and individual nodes
@@ -51,7 +50,7 @@ spec:
                       memory: true
                       showLabel: true
                 - search:
-                    provider: duckduckgo
+                    provider: google
                     target: _blank
               kubernetes:
                 mode: cluster

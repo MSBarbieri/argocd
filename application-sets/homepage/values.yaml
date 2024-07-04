@@ -78,10 +78,10 @@ config:
             description: Colmeia Grafana
             siteMonitor: https://grafana.colmeia.cx/
         - PGAdmin:
-            href: https://pgadmin.colmeia.cx/
+            href: http://pgadmin.colmeia.cx/
             icon: https://static-00.iconduck.com/assets.00/pgadmin-icon-2048x2048-rxk8ydpt.png
             description: Colmeia PGAdmin
-            siteMonitor: https://pgadmin.colmeia.cx/
+            siteMonitor: http://pgadmin.colmeia.cx/
         - Jira:
             href: https://colmeiame.atlassian.net/
             icon: https://static-00.iconduck.com/assets.00/jira-icon-512x512-kkop6eik.png

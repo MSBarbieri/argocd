@@ -176,8 +176,8 @@ config:
         target: _self
     - datetime:
         text_size: xl
-        dateStyle: short
         format:
+          dateStyle: short
           timeStyle: short
 
   kubernetes:

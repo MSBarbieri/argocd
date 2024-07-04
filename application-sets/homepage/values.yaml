@@ -20,7 +20,8 @@ config:
       provider: duckduckgo
     layout:
       Personal:
-        style: column
+        style: row
+        columns: 3
       Colmeia Internal:
         style: row
         columns: 4

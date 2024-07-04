@@ -19,19 +19,18 @@ config:
       showSearchSuggestions: true
       provider: duckduckgo
     layout:
-      Colmeia Site:
-        style: row
+      Personal:
         columns: 4
       Colmeia Internal:
         style: row
         columns: 4
-      Colmeia Admin:
-        style: column
-      Colmeia Management:
-        style: column
-      Personal:
+      Colmeia Site:
         style: row
         columns: 4
+      Colmeia Management:
+        style: column
+      Colmeia Admin:
+        style: column
       HomeLab:
         style: row
         columns: 2
@@ -113,6 +112,21 @@ config:
             icon: https://www.svgrepo.com/show/504601/microsoft365-admin.svg
             description: admin microsoft
     - Personal:
+        - Calendar:
+            widget:
+              type: calendar
+              firstDayInWeek: sunday # optional - defaults to monday
+              view: monthly # optional - possible values monthly, agenda
+              maxEvents: 10 # optional - defaults to 10
+              showTime: true # optional - show time for event happening today - defaults to false
+              timezone: America/Sao_Paulo # optional and only when timezone is not detected properly (slightly slower performance) - force timezone for ical events (if it's the same - no change, if missing or different in ical - will be converted to this timezone)
+              integrations: # optional
+                - type: ical # Show calendar events from another service
+                  url: https://outlook.office365.com/owa/calendar/ef68d9504e2946268f3194660ff1d254@colmeia.cx/173afa2d71c747ebbeb06314958a69ea12727456104246617436/calendar.ics # URL with calendar events
+                  name: Meus Eventos # required - name for these calendar events
+                  color: zinc # optional - defaults to pre-defined color for the service (zinc for ical)
+                  params: # optional - additional params for the service
+                    showName: true # optional - show name before event title in event line - defaults to false
         - ArgoCD:
             href: https://argocd.kube.msbarbieri.dev/
             description: ArgoCD
@@ -143,6 +157,7 @@ config:
             - abbr: mt
               href: https://monkeytype.com/
   widgets:
+
     # show the kubernetes widget, with the cluster summary and individual nodes
     - kubernetes:
         cluster:
@@ -159,6 +174,23 @@ config:
     - search:
         provider: duckduckgo
         target: _self
+    - datetime:
+        text_size: xl
+        format:
+          timeStyle: short
+    - kubernetes:
+        cluster:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+          label: "cluster"
+        nodes:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+
   kubernetes:
     mode: cluster
 # The service account is necessary to allow discovery of other services

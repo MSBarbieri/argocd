@@ -176,20 +176,9 @@ config:
         target: _self
     - datetime:
         text_size: xl
+        dateStyle: short
         format:
           timeStyle: short
-    - kubernetes:
-        cluster:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
-          label: "cluster"
-        nodes:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
 
   kubernetes:
     mode: cluster

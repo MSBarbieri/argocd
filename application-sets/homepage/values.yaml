@@ -1,24 +1,147 @@
+image:
+  repository: ghcr.io/gethomepage/homepage
+  tag: latest
 config:
+  settings:
+    title: Matheus Barbieri HomePage
+    color: slate
+    background:
+      image: https://github.com/MSBarbieri/wallpapers/blob/ee3f94dd71e228412ab83991c609fa9afeb23cba/mylivewallpapers-com-Miyamoto-Vagabond-4K-ezgif.com-video-to-webp-converter.webp?raw=true
+      blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+      saturate: 50 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+      brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+      opacity: 50 # 0-100
+    headerStyle: clean
+    target: _self
+    quicklaunch:
+      searchDescriptions: false
+      hideInernetSearch: true
+      showSearchSuggestions: true
+      provider: duckduckgo
+    layout:
+      Colmeia Site:
+        style: row
+        columns: 4
+      Colmeia Internal:
+        style: row
+        columns: 4
+      Colmeia Admin:
+        style: column
+      Colmeia Management:
+        style: column
+      Personal:
+        style: row
+        columns: 4
+      HomeLab:
+        style: row
+        columns: 2
+        header: false
+      Media:
+        style: row
+        columns: 4
+  services:
+    - Colmeia Site:
+        - Prod:
+            href: https://app.colmeia.cx
+            icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+            description: Prod Colmeia
+            siteMonitor: https://api.colmeia.cx/v1/health-check
+        - Beta:
+            href: https://beta-app.colmeia.cx
+            icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+            description: Prod Colmeia
+            siteMonitor: https://beta-api.colmeia.cx/v1/health-check
+        - QA:
+            href: https://qa-app.colmeia.cx
+            icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+            description: QA Colmeia
+            siteMonitor: https://qa-api.colmeia.cx/v1/health-check
+        - Dev:
+            href: https://dev-app.colmeia.cx
+            icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+            description: Dev Colmeia
+            siteMonitor: https://dev-api.colmeia.cx/v1/health-check
+        - Site:
+            href: https://colmeia.cx
+            icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAWhjRQakc99Hy6lv9K9NZherllnMNZLpZWw&s
+            description: Dev Colmeia
+            siteMonitor: https://colmeia.cx
+    - Colmeia Internal:
+        - Gitlab:
+            href: https://gitlab.colmeia.me/
+            icon: https://static-00.iconduck.com/assets.00/gitlab-icon-2048x1885-1o0cwkbx.png
+            description: gitlab da colmeia
+            siteMonitor: https://gitlab.colmeia.me/
+        - Grafana:
+            href: https://grafana.colmeia.cx/
+            icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Grafana_icon.svg/1969px-Grafana_icon.svg.png
+            description: Colmeia Grafana
+            siteMonitor: https://grafana.colmeia.cx/
+        - PGAdmin:
+            href: https://pgadmin.colmeia.cx/
+            icon: https://static-00.iconduck.com/assets.00/pgadmin-icon-2048x2048-rxk8ydpt.png
+            description: Colmeia PGAdmin
+            siteMonitor: https://pgadmin.colmeia.cx/
+        - Jira:
+            href: https://colmeiame.atlassian.net/
+            icon: https://static-00.iconduck.com/assets.00/jira-icon-512x512-kkop6eik.png
+            description: Colmeia Jira
+        - Outlook:
+            href: outlook.office365.com/mail/
+            icon: https://cdn-icons-png.flaticon.com/512/732/732223.png
+            description: Outlook 
+    - Colmeia Management:
+        - AWS:
+            href: https://720224798007.signin.aws.amazon.com/console
+            icon: https://images.store.crowdstrike.com/9748z14dd5zg/7MGTtSyAi2Z29Dmiwkusu/30de0bcae755e11aebe7e87823feb9cb/Googlecloud_icon_square.png
+            description: console de gcp
+        - Console GCP:
+            href: https://console.cloud.google.com/
+            icon: https://images.store.crowdstrike.com/9748z14dd5zg/7MGTtSyAi2Z29Dmiwkusu/30de0bcae755e11aebe7e87823feb9cb/Googlecloud_icon_square.png
+            description: console de gcp
+        - Equinix:
+            href: https://auth.equinix.com/
+            icon: https://cdn.icon-icons.com/icons2/2699/PNG/512/equinix_logo_icon_169199.png
+            description: Equinix
+    - Colmeia Admin:
+        - Admin Google:
+            href: https://admin.google.com/
+            icon: https://seeklogo.com/images/G/google-admin-logo-A220604CE8-seeklogo.com.png
+            description: admin google
+        - Admin Microsoft :
+            href: https://admin.microsoft.com/
+            icon: https://www.svgrepo.com/show/504601/microsoft365-admin.svg
+            description: admin microsoft
+    - Personal:
+        - ArgoCD:
+            href: https://argocd.kube.msbarbieri.dev/
+            description: ArgoCD
+            icon: https://miro.medium.com/v2/resize:fit:1400/1*d_nWfpG-EF831-yXwx64HQ.png
+            app: argocd-server
+            namespace: argocd
+
   bookmarks:
     - Developer:
         - Github:
-            - abbr: GH
+            - abbr: gh
               href: https://github.com/
-  services:
-    - My First Group:
-        - My First Service:
-            href: http://localhost/
-            description: Homepage is awesome
-
-    - My Second Group:
-        - My Second Service:
-            href: http://localhost/
-            description: Homepage is the best
-
-    - My Third Group:
-        - My Third Service:
-            href: http://localhost/
-            description: Homepage is 😎
+        - Gitlab:
+            - abbr: gl
+              href: http://gitlab.colmeia.me/
+        - Google Cloud:
+            - abbr: gcp
+              href: https://console.cloud.google.com/
+    - Watch:
+        - youtube:
+            - abbr: gl
+              href: http://youtube.com
+        - Twitch.tv:
+            - abbr: gcp
+              href: https://twitch
+    - Play:
+        - monkeytype:
+            - abbr: mt
+              href: https://monkeytype.com/
   widgets:
     # show the kubernetes widget, with the cluster summary and individual nodes
     - kubernetes:
@@ -35,11 +158,9 @@ config:
           showLabel: true
     - search:
         provider: duckduckgo
-        target: _blank
+        target: _self
   kubernetes:
     mode: cluster
-  settings:
-
 # The service account is necessary to allow discovery of other services
 serviceAccount:
   create: true
@@ -47,19 +168,19 @@ serviceAccount:
 
 # This enables the service account to access the necessary resources
 enableRbac: true
-
 ingress:
   main:
     enabled: true
     annotations:
-      # Example annotations to add Homepage to your Homepage!
-      gethomepage.dev/enabled: "true"
-      gethomepage.dev/name: "Homepage"
-      gethomepage.dev/description: "Dynamically Detected Homepage"
-      gethomepage.dev/group: "Dynamic"
-      gethomepage.dev/icon: "homepage.png"
+      traefik.ingress.kubernetes.io/router.entrypoints: websecure
+      traefik.ingress.kubernetes.io/router.tls: 'true'
+      ingress.kubernetes.io/force-ssl-redirect: "true"
+    tls:
+      - secretName: istio-cert
+        hosts:
+        -  kube.msbarbieri.dev
     hosts:
-      - host: homepage.example.com
+      - host: kube.msbarbieri.dev
         paths:
           - path: /
             pathType: Prefix

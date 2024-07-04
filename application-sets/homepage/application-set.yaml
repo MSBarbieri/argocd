@@ -8,7 +8,7 @@ spec:
     metadata:
       name: '{{cluster}}-homepage'
     spec:
-      source:
+      sources:
       - repoURL: https://jameswynn.github.io/helm-charts
         targetRevision: 1.2.3
         chart: homepage

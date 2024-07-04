@@ -9,9 +9,12 @@ spec:
       name: '{{cluster}}-homepage'
     spec:
       source:
-        repoURL: https://jameswynn.github.io/helm-charts
+      - repoURL: https://jameswynn.github.io/helm-charts
         targetRevision: 1.2.3
         chart: homepage
         helm:
           valueFiles:
-          - values.yaml
+          -  $values/application-sets/homepage/values.yaml
+      - repoURL: https://github.com/MSBarbieri/argocd-application-sets.git
+        targetRevision: HEAD
+        ref: values

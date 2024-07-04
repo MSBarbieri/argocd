@@ -87,7 +87,7 @@ config:
             icon: https://static-00.iconduck.com/assets.00/jira-icon-512x512-kkop6eik.png
             description: Colmeia Jira
         - Outlook:
-        href: https://outlook.office365.com/mail/
+            href: https://outlook.office365.com/mail/
             icon: https://cdn-icons-png.flaticon.com/512/732/732223.png
             description: Outlook 
     - Colmeia Management:

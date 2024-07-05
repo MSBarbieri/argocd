@@ -115,8 +115,8 @@ config:
     - Colmeia Management:
         - AWS:
             href: https://720224798007.signin.aws.amazon.com/console
-            icon: https://images.store.crowdstrike.com/9748z14dd5zg/7MGTtSyAi2Z29Dmiwkusu/30de0bcae755e11aebe7e87823feb9cb/Googlecloud_icon_square.png
-            description: console de gcp
+            icon: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.pngaaa.com%2F681%2F876681-middle.png&f=1&nofb=1&ipt=fbb8b8363dc743ae1ce9fbab7d00e068a8ec9f990309e5d2b44ff4aa89d8cedc&ipo=images
+            description: AWS 
         - Console GCP:
             href: https://console.cloud.google.com/
             icon: https://images.store.crowdstrike.com/9748z14dd5zg/7MGTtSyAi2Z29Dmiwkusu/30de0bcae755e11aebe7e87823feb9cb/Googlecloud_icon_square.png

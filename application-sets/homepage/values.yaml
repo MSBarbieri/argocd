@@ -151,8 +151,8 @@ config:
             - abbr: gl
               href: http://youtube.com
         - Twitch.tv:
-            - abbr: gcp
-              href: https://twitch
+            - abbr: tw
+              href: https://twitch.tv
     - Play:
         - monkeytype:
             - abbr: mt
